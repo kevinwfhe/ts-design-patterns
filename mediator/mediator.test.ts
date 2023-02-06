@@ -47,7 +47,6 @@ describe("Mediator", () => {
 
     app.input.type("abc123!@#");
     app.confirmButton.click();
-    console.log(logSpy)
     expect(logSpy).toHaveBeenCalledWith("input validated false");
   });
 });
