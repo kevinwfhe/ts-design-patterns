@@ -7,8 +7,7 @@ import { getOS } from "./util";
 
 class App {
   private button: ButtonFactory;
-  constructor() {}
-  initialize() {
+  constructor() {
     const os = getOS() as "Web" | "Mobile"; // implemented in test case
     if (os === "Web") {
       this.button = new WebButtonFactory();
@@ -17,7 +16,6 @@ class App {
     }
   }
   render() {
-    this.initialize();
     this.button.render();
   }
 }

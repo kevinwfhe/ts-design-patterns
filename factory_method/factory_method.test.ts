@@ -16,7 +16,6 @@ describe("Factory Method", () => {
     jest.mocked(getOS).mockImplementationOnce(mockGetOS);
 
     const app = new App();
-    app.initialize();
     app.render();
     
     expect(logSpy).toHaveBeenCalledWith("WebButton created");
@@ -29,7 +28,6 @@ describe("Factory Method", () => {
     jest.mocked(getOS).mockImplementationOnce(mockGetOS);
 
     const app = new App();
-    app.initialize();
     app.render();
 
     expect(logSpy).toHaveBeenCalledWith("MobileButton created");
