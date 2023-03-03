@@ -28,12 +28,6 @@ abstract class BaseOS extends OS {
 }
 
 class iOS extends BaseOS {
-  hasPaymentMethod(): boolean {
-    return this.paymentMethods.length > 0;
-  }
-  isLoggedIn(): boolean {
-    return this.loggedIn;
-  }
   login() {
     this.loggedIn = true;
     return "Log in with Apple ID";
@@ -51,12 +45,6 @@ class iOS extends BaseOS {
 }
 
 class Android extends BaseOS {
-  hasPaymentMethod(): boolean {
-    return this.paymentMethods.length > 0;
-  }
-  isLoggedIn(): boolean {
-    return this.loggedIn;
-  }
   login() {
     this.loggedIn = true;
     return "Log in with Google account";

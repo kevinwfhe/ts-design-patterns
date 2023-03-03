@@ -10,8 +10,8 @@ describe("Bridge", () => {
     jest.mocked(getOS).mockImplementationOnce(mockGetOS);
 
     const bridge = new JsBridge();
-    expect(bridge.cloudSync()).toBe("Synced from iCloud");
     expect(bridge.downloadApp()).toBe("Download from App Store");
+    expect(bridge.cloudSync()).toBe("Synced from iCloud");
   });
 
   test("Running on Android", () => {
