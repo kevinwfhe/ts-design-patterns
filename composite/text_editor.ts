@@ -35,7 +35,7 @@ class Editor extends Block {
     for (let i = 0; i < path.length; i++) {
       if (block instanceof Block) {
         block = block.children[path[i]];
-      } else break;
+      } else break; // end if current block is a TextBlock
     }
     return block;
   }
